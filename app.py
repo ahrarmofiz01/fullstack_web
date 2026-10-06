@@ -1,8 +1,6 @@
-from flask import Flask
+from flask import Flask,render_template
+
 app=Flask(__name__)
 @app.route("/")
 def home():
-    return"you are on flask server"
-@app.route("/about")
-def about():
-    return "this is about page"
+    return render_template("index.html")
